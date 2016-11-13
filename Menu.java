@@ -13,7 +13,7 @@ public class Menu
 		
 		while( choice >= 0 )
 		{
-			if( !( choice >= 1 && choice <= 9 ) )
+			if( !( choice >= 1 && choice <= 10 ) )
 			{
 				System.out.println();
 				System.out.println( "-------------------" );
@@ -26,12 +26,13 @@ public class Menu
 				System.out.println( " <6> War" );
 				System.out.println( " <7> Racing Game" );
 				System.out.println( " <8> Guesser" );
-				System.out.println( " <9> Quit" );
+				System.out.println( " <9> Dice Generator" );
+				System.out.println( " <10> Quit" );
 				
 				stringChoice = input.nextLine();
 				
 				choiceIsValid = false;
-				for( int i = 1; i <= 9; i++ )
+				for( int i = 1; i <= 10; i++ )
 				{
 					if ( stringChoice.equals( "" + i ) )
 					{
@@ -42,10 +43,10 @@ public class Menu
 			
 			while( !choiceIsValid )
 			{
-				System.out.println( "Please enter a single number from 1 to 8." );
+				System.out.println( "Please enter a single number from 1 to 10." );
 				stringChoice = input.nextLine();
 				
-				for( int i = 1; i <= 9; i++ )
+				for( int i = 1; i <= 10; i++ )
 				{
 					if ( stringChoice.equals( "" + i ) )
 					{
@@ -83,6 +84,9 @@ public class Menu
 				playGuesser();
 				break;
 				case 9:
+				playDiceGenerator();
+				break;
+				case 10:
 				choice = -1;
 				break;
 				default:
@@ -150,7 +154,7 @@ public class Menu
 	
 	public static void playWar()
 	{
-		System.out.println( "War TBD" );
+		new War();
 	}
 	
 	public static void playRacingGame()
@@ -161,5 +165,10 @@ public class Menu
 	public static void playGuesser()
 	{
 		new Guesser();
+	}
+	
+	public static void playDiceGenerator()
+	{
+		new DiceGenerator();
 	}
 }

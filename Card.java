@@ -94,21 +94,6 @@ public class Card implements Comparable
 		return compareTo( c ) == 0;
 	}
 	
-	public boolean greaterThanByValue( Card c )
-	{
-		return value > c.getValue();
-	}
-	
-	public boolean equalToByValue( Card c )
-	{
-		return value == c.getValue();
-	}
-	
-	public boolean lessThanByValue( Card c )
-	{
-		return value < c.getValue();
-	}
-	
 	/* public static void main( String[] args )
 	{
 		ArrayList<Card> cards = new ArrayList<Card>();
