@@ -24,8 +24,8 @@ public class CoinFlipper {
 		System.out.println("Total heads: " + TotalHeads);
 		System.out.println("Total tails: " + TotalTails);
 	}
-
+/*
 	public static void main(String[] args) {
 		new CoinFlipper();
-	}
+	}*/
 }

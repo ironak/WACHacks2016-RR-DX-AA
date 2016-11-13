@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class TicTacToe {
-	public static void main(String[] args) {
+	
+	public TicTacToe()
+	{
 		char[][] theBoard = new char[3][3];
 		Scanner input = new Scanner(System.in);
 		for (int i = 0; i < 3; i++) {
@@ -128,7 +130,10 @@ public class TicTacToe {
 				}
 			}
 		}
-		input.close();
 	}
-
+	/*
+	public static void main(String[] args) {
+		new TicTacToe();
+	}
+*/
 }

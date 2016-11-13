@@ -1,7 +1,8 @@
 import java.util.Scanner;
 public class Mastermind {
-
-	public static void main(String[] args) {
+	
+	public Mastermind()
+	{
 		Scanner input = new Scanner(System.in);
 
 		//user can choose number of things they're guessing
@@ -133,7 +134,10 @@ public class Mastermind {
 		}
 		System.out.println("It took you " + count + " tries.");
 
-		input.close();
 	}
-
+	/*
+	public static void main(String[] args) {
+		new Mastermind;
+	}
+*/
 }
