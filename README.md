@@ -1,5 +1,5 @@
 # WACHacks2016-RR-DX-AA
-Repository for WACHacks 2016 with Amelia, David and Ronak
+Repository for WACHacks 2016 with Amelia, Josh, David and Ronak
 
 ##Games:
 
