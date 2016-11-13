@@ -1,7 +1,8 @@
 # WACHacks2016-RR-DX-AA
 Repository for WACHacks 2016 with Amelia, David and Ronak
 
-Games:
+##Games:
+
 1. Mastermind - Amelia
 2. Beat The Die - David
 3. Tic Tac Toe - Amelia
