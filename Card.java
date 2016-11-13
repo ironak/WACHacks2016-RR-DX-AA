@@ -1,3 +1,5 @@
+//import java.util.*;
+
 public class Card implements Comparable
 {
 	private static final String[] VALUE_STRINGS = { "Error", "Ace", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
@@ -5,6 +7,7 @@ public class Card implements Comparable
 	private int value;	//1: Ace, 2-10: 2-10, 11: Jack, 12: Queen, 13: King
 	private int suit;	//0: Clubs, 1: Diamonds, 2: Hearts, 3: Spades
 	
+	//Constructors
 	public Card()
 	{
 		value = 1;
@@ -28,19 +31,19 @@ public class Card implements Comparable
 		return suit;
 	}
 	
-	public int getValueString()
+	public String getValueString()
 	{
 		return VALUE_STRINGS[value];
 	}
 	
-	public int getSuitString()
+	public String getSuitString()
 	{
 		return SUIT_STRINGS[suit];
 	}
 	
 	public String toString()
 	{
-		return getValueString() + " of " getSuitString();
+		return getValueString() + " of " + getSuitString();
 	}
 	
 	//Setters
@@ -53,7 +56,7 @@ public class Card implements Comparable
 		else
 		{
 			value = 1;
-			System.out.println( v + " is not a valid value. Card has been set to " toString() );
+			System.out.println( v + " is not a valid value. Card has been set to " + toString() );
 		}
 	}
 	
@@ -66,17 +69,58 @@ public class Card implements Comparable
 		else
 		{
 			suit = 3;
-			System.out.println( s + " is not a valid suit. Card has been set to " toString() );
+			System.out.println( s + " is not a valid suit. Card has been set to " + toString() );
 		}
 	}
 	
+	//Compare
 	public int compareTo( Card c )
 	{
 		return getIndexInSortedDeck() - c.getIndexInSortedDeck();
+	}
+	
+	public int compareTo( Object o )
+	{
+		return -1;
 	}
 	
 	public int getIndexInSortedDeck()
 	{
 		return 13*suit + value;
 	}
+	
+	public boolean equals( Card c )
+	{
+		return compareTo( c ) == 0;
+	}
+	
+	public boolean greaterThanByValue( Card c )
+	{
+		return value > c.getValue();
+	}
+	
+	public boolean equalToByValue( Card c )
+	{
+		return value == c.getValue();
+	}
+	
+	public boolean lessThanByValue( Card c )
+	{
+		return value < c.getValue();
+	}
+	
+	/* public static void main( String[] args )
+	{
+		ArrayList<Card> cards = new ArrayList<Card>();
+		cards.add( new Card( 1,0 ) );
+		cards.add( new Card( 1,1 ) );
+		cards.add( new Card( 1,2 ) );
+		cards.add( new Card( 12,0 ) );
+		cards.add( new Card( 13,0 ) );
+		Collections.sort( cards );
+		for( Card c : cards )
+		{
+			System.out.println( c );
+		}
+	} */
 }
