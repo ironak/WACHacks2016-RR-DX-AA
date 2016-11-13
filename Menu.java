@@ -130,7 +130,7 @@ public class Menu
 	
 	public static void playBeatTheDie()
 	{
-		System.out.println( "BTD TBD" );
+		new BeatTheDie();
 	}
 	
 	public static void playTicTacToe()

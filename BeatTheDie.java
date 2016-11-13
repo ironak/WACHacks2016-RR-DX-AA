@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class BeatTheDie {
 
-	public static void main(String[] args) {
+	public BeatTheDie()
+	{
 		System.out.println("Welcome to Beat the Die!");
 		System.out.println("How many Numbers do you want to play with?");
 		Scanner rows = new Scanner(System.in);
@@ -137,7 +138,11 @@ public class BeatTheDie {
 		else {
 			System.out.println("You Lose!");
 		}
+		
 	}
+	/*public static void main(String[] args) {
+		
+	}*/
 		
 	public static int diceRoll() {
 		
