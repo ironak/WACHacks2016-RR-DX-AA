@@ -27,13 +27,20 @@ public class Hand
 		cards = newCards;
 	}
 	
+	public void empty()
+	{
+		setCards( new ArrayList<Card>() );
+	}
+	
 	//Adding cards
-	public void addCard( Card c )
+	public Card addCard( Card c )
 	{
 		if ( !contains( c ) )
 		{
 			cards.add( c );
 		}
+		
+		return c;
 	}
 	
 	//Drawing cards
@@ -82,6 +89,14 @@ public class Hand
 			{
 				cards.remove( myCard );
 			}
+		}
+	}
+	
+	public void dealCardsFromTop( int number, Hand h )
+	{
+		for( int j = 0; j < number; j++ )
+		{
+			h.addCard( removeCardAt(j) );
 		}
 	}
 	

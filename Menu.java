@@ -13,7 +13,7 @@ public class Menu
 		
 		while( choice >= 0 )
 		{
-			if( !( choice >= 1 && choice <= 8 ) )
+			if( !( choice >= 1 && choice <= 9 ) )
 			{
 				System.out.println();
 				System.out.println( "-------------------" );
@@ -25,12 +25,13 @@ public class Menu
 				System.out.println( " <5> Coin Flipper" );
 				System.out.println( " <6> War" );
 				System.out.println( " <7> Racing Game" );
-				System.out.println( " <8> Quit" );
+				System.out.println( " <8> Guesser" );
+				System.out.println( " <9> Quit" );
 				
 				stringChoice = input.nextLine();
 				
 				choiceIsValid = false;
-				for( int i = 1; i <= 8; i++ )
+				for( int i = 1; i <= 9; i++ )
 				{
 					if ( stringChoice.equals( "" + i ) )
 					{
@@ -44,7 +45,7 @@ public class Menu
 				System.out.println( "Please enter a single number from 1 to 8." );
 				stringChoice = input.nextLine();
 				
-				for( int i = 1; i <= 7; i++ )
+				for( int i = 1; i <= 9; i++ )
 				{
 					if ( stringChoice.equals( "" + i ) )
 					{
@@ -76,9 +77,12 @@ public class Menu
 				playWar();
 				break;
 				case 7:
-				playRacinGame();
+				playRacingGame();
 				break;
 				case 8:
+				playGuesser();
+				break;
+				case 9:
 				choice = -1;
 				break;
 				default:
@@ -149,8 +153,13 @@ public class Menu
 		System.out.println( "War TBD" );
 	}
 	
-	public static void playRacinGame()
+	public static void playRacingGame()
 	{
 		new RacingGame();
+	}
+	
+	public static void playGuesser()
+	{
+		new Guesser();
 	}
 }
