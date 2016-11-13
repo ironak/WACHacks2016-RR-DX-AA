@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Menu
 {
-	public static void main( String[] args )
+	public Menu()
 	{
 		Scanner input = new Scanner( System.in );
 		int choice = 0;
 		String stringChoice = "0";
 		System.out.println();
-		System.out.println( "WELCOME TO THE GAME EMPORIUM");
+		System.out.println( "WELCOME TO THE GAME EMPORIUM" );
 		boolean choiceIsValid = false;
 		
 		while( choice >= 0 )
@@ -87,6 +87,7 @@ public class Menu
 				playDiceGenerator();
 				break;
 				case 10:
+				System.out.println( "Thanks for playing!" );
 				choice = -1;
 				break;
 				default:
@@ -125,6 +126,11 @@ public class Menu
 			System.out.println( "We'll take that as a 'no'" );
 			return false;
 		}
+	}
+	
+	public static void main( String[] args )
+	{
+		new Menu();
 	}
 	
 	public static void playMastermind()
